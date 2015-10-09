@@ -1,0 +1,20 @@
+.social-links{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+.social-link{
+
+  display: inline-block;
+  list-style-type: none;
+  margin-right: -4px;
+
+  a{
+    display: block;
+    padding: 10px 14px;
+    font-size: 28px;
+    text-decoration: none;
+  }
+
+}
