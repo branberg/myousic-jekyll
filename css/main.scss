@@ -4,7 +4,12 @@
 @charset "utf-8";
 
 
-@import
-  "base",
-  "layout"
-;
+@import "../node_modules/normalize.css/normalize.css";
+
+@import "variables";
+@import "mixins";
+
+@import "base";
+@import "layout";
+@import "mailing-list";
+@import "footer";
