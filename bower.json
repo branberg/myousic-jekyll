@@ -1,0 +1,21 @@
+{
+  "name": "myousic-jekyll",
+  "version": "0.0.1",
+  "homepage": "https://github.com/branberg/myousic-jekyll",
+  "authors": [
+    "Sam Brannon <sam@branberg.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "jquery": "~2.1.4",
+    "fitvids": "~1.1.0"
+  }
+}
