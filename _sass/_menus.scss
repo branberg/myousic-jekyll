@@ -1,5 +1,6 @@
 // setup for mobile menu
 #mobile-menu{
+
   background-color: $black;
   position: fixed;
   top: 0;
@@ -8,10 +9,38 @@
   left: 0;
   z-index: 0;
   padding: 0 60px 0 0;
-  font-family: "Montserrat", sans-serif;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  .menu{
+    padding: 20px;
+    margin: 0;
+    text-align: left;
+  }
+  .menu-item{
+    display: block;
+  }
+  .menu-item__link{
+
+    display: block;
+    padding: 20px;
+    font-size: 1.2em;
+    opacity: 0.55;
+    color: $white;
+    @include transition( opacity, 0.05s, linear );
+
+    &:hover{
+      opacity: 1;
+    }
+
+  }
+
 }
 
 .mobile-menu-toggle{
+
   outline: none;
   display: block;
   position: absolute;
@@ -19,24 +48,59 @@
   left: 0;
   width: 60px;
   height: 60px;
-  color: $white;
+  color: $black;
   z-index: 100;
   font-size: 1.5em;
   opacity: 0.75;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
 }
 
 // general menus
-.menu{
+.menu-container{
 
+  display: none;
+
+  @media (min-width: 768px) {
+
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+
+  }
+
+}
+.menu{
+  text-align: center;
 }
 .menu-item{
 
   text-transform: uppercase;
   color: $white;
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  font-family: $montserrat;
 
   &__link{
+
+    display: inline-block;
+    padding: 0.625em 1em;
     text-decoration: none;
+    -webkit-backface-visibility: hidden;
     @include transition( color, 0.15s, linear );
+
+    &:hover{
+      color: $white;
+    }
+
   }
 
 }

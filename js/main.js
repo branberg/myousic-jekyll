@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
       }, {
         duration: 120,
         specialEasing: "swing"
-      });
+      }).toggleClass('open');
       $(mobileMenuToggle).removeClass('expanded');
     } else {
       siteWrap.animate({
@@ -118,7 +118,7 @@ jQuery(document).ready(function($) {
       }, {
         duration: 120,
         specialEasing: "swing"
-      });
+      }).toggleClass('open');
       $(mobileMenuToggle).addClass('expanded');
     }
 
