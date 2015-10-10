@@ -45,7 +45,9 @@ FUNCTIONS
   // 3 - mobileMenu
   $.fn.mobileMenu = function(){
     var menu = this.html();
-    $('body').prepend('<div id="mobile_menu">'+menu+'</div>');
+    var mobileMarkup = '<button class="mobile-menu-toggle"><i class="fa fa-bars"></i></button>';
+    $('body').prepend('<div id="mobile-menu">' + menu + '</div>');
+    $('#site-wrap').prepend(mobileMarkup);
     return this;
   };
 
@@ -90,38 +92,34 @@ jQuery(document).ready(function($) {
   /****************************************************************
   Build mobile menu
   ****************************************************************/
-  $('#header_nav').mobileMenu();
+  $('.site-header .menu-container').mobileMenu();
 
   /****************************************************************
   Animate the menu stuff
   ****************************************************************/
-  $('#mobile_menu_toggle').click(function(){
+  var mobileMenuToggle = $('.mobile-menu-toggle');
+  $(mobileMenuToggle).click(function(){
 
     var windowWidth = $(window).width();
     var rightOffset = windowWidth - 60;
+    var siteWrap = $('#site-wrap');
 
-    if( $('#mobile_menu_toggle').hasClass('expanded') ) {
-
-      $('#site_wrap, #mobile_header').animate({
+    if( $(mobileMenuToggle).hasClass('expanded') ) {
+      siteWrap.animate({
         right: 0
       }, {
         duration: 120,
         specialEasing: "swing"
       });
-
-      $('#mobile_menu_toggle').removeClass('expanded');
-
+      $(mobileMenuToggle).removeClass('expanded');
     } else {
-
-      $('#site_wrap, #mobile_header').animate({
+      siteWrap.animate({
         right: -rightOffset
       }, {
         duration: 120,
         specialEasing: "swing"
       });
-
-      $('#mobile_menu_toggle').addClass('expanded');
-
+      $(mobileMenuToggle).addClass('expanded');
     }
 
     return false;

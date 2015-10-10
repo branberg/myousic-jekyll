@@ -3,14 +3,19 @@
 ---
 @charset "utf-8";
 
-
+// vendor
 @import "../bower_components/normalize.css/normalize.css";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
 
+// init
 @import "variables";
 @import "mixins";
 
+// app
 @import "base";
 @import "layout";
+@import "header";
+@import "menus";
 @import "mailing-list";
 @import "social-links";
 @import "footer";

@@ -1,0 +1,29 @@
+// setup for mobile menu
+
+#mobile-menu{
+  background-color: #00243b;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  padding: 0 60px 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+// general menus
+.menu{
+
+}
+.menu-item{
+
+  text-transform: uppercase;
+  color: $white;
+
+  &__link{
+    text-decoration: none;
+    @include transition( color, 0.15s, linear );
+  }
+
+}

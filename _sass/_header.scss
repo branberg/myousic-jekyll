@@ -1,0 +1,37 @@
+.site-header{
+  background: url('https://images.unsplash.com/photo-1440964829947-ca3277bd37f8?q=80&fm=jpg&s=820fcc9dd26c0ede80f3b1663c543965') 50% 50% no-repeat;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logo{
+
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 60px 20px;
+  color: $white;
+  text-decoration: none;
+  font-size: 2em;
+  text-align: center;
+
+  &--text{
+    // todo
+    @extend .logo;
+  }
+  &--image{
+    // todo
+    @extend .logo;
+  }
+
+}
+
+.site-header{
+
+  .menu-container{
+    display: none;
+  }
+
+}
