@@ -3,6 +3,16 @@
   color: #999999;
   padding: 40px 0;
   background-color: #333333;
+  font-family: $montserrat;
+
+  @media (min-width: 480px) {
+    padding: 60px 0;
+  }
   
 }
 
+.site-credits{
+  text-align: center;
+  padding-top: 40px;
+  margin: 0;
+}
