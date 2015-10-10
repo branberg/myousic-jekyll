@@ -3,6 +3,10 @@
   color: #999999;
   padding: 40px 0;
   background-color: #333333;
+
+  @media (min-width: 480px) {
+    padding: 60px 0;
+  }
   
 }
 
