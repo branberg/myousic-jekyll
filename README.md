@@ -12,3 +12,6 @@ Then run server by:
 Then go to `http://localhost:4000` in your browser to preview site
 
 **STILL VERY MUCH A WORK IN PROGRESS**
+
+Preview:
+![](http://i.imgur.com/FrEbJO7.png?1)
