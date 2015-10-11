@@ -2,10 +2,11 @@
   <div class="wrap">
     <a href="{{ site.baseurl }}/" class="logo--text">{{ site.title }}</a>
     <nav class="menu-container">
+      {% assign pages = site.pages | sort:"weight" %}
       <ul class="menu">
-        {% for page in site.pages %}
-          {% if page.title %}
-            <li class="menu-item"><a class="menu-item__link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% for p in pages %}
+          {% if p.title %}
+            <li class="menu-item"><a class="menu-item__link {% if p.url == page.url  %}current{% endif %}" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
