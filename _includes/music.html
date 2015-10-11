@@ -1,0 +1,20 @@
+<div class="page-section">
+  <div class="wrap">
+    <header class="page-section__header">
+      <h2>Music</h2>
+    </header>
+    <div class="album">
+      <div class="album__embed">
+        {{ include.embed }}
+      </div>
+      <div class="album__info">
+        <span class="album__type">{{ include.type }}</span>
+        <h3 class="album__title">{{ include.title }}</h3>
+        <div class="album__description">
+          <p>{{ include.description }}</p>
+        </div>
+        <a href="{{ include.btn-link }}" class="album__button--full">{{ include.btn-text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
