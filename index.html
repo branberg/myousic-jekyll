@@ -1,23 +1,9 @@
 ---
 layout: default
-widgets:
-  music:
-    embed: '<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=195025398/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""></iframe>'
-    type: 'Single'
-    title: 'Boardinghouse'
-    description: 'Testing 1 2 3'
-    btn-text: 'DOwnload'
-    btn-link: '#'
 ---
 
 <div class="page">
 
-  {% include music.html embed='<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=195025398/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""></iframe>' type="Single" title="Boardinghouse" desc="asdfasdf" btn-text="Download" btn-link="#" %}
-
-  {% for w in page.widgets %}
-    
-    {{ w }}
-
-  {% endfor %}
+  {% include music.html embed='<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=195025398/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""></iframe>' type="Single" title="Boardinghouse" desc="Recorded at Treebomb Studios (2015)." btn-text="Download" btn-link="#" %}
 
 </div>
