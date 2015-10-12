@@ -4,7 +4,7 @@ layout: default
 
 <div class="page">
 
-  {% for w in site.data.widgets %}
+  {% for w in site.data.homepageWidgets %}
 
     <div class="page-section">
       <div class="wrap">
@@ -16,8 +16,25 @@ layout: default
           {% endif %}
         </header>
 
+        <!-- Music Widget -->
         {% if w.widgetType == 'music' %}
           {% include music.html embed=w.embed type=w.type title=w.title description=w.description btn-text=w.btn-text btn-link=w.btn-link %}
+        {% endif %}
+
+        <!-- News Widget -->
+        {% if w.widgetType == 'news' %}
+          <p>News coming soon...</p>
+        {% endif %}
+
+        <!-- Shows Widget -->
+        {% if w.widgetType == 'shows' %}
+          <table class="tour-dates">
+            <tbody>
+              {% for s in w.shows %}
+                {% include shows.html date=s.date venue=s.venue venue-link=s.venu-link city=s.city tickets=s.tickets facebook=s.facebook twitter=s.twitter %}
+              {% endfor %}
+            </tbody>
+          </table>
         {% endif %}
 
       </div>
