@@ -4,6 +4,25 @@ layout: default
 
 <div class="page">
 
-  {% include music.html embed='<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=195025398/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless=""></iframe>' type="Single" title="Boardinghouse" desc="Recorded at Treebomb Studios (2015)." btn-text="Download" btn-link="#" %}
+  {% for w in site.data.widgets %}
+
+    <div class="page-section">
+      <div class="wrap">
+        <header class="page-section__header">
+          {% if w.header-link != "" %}
+            <a href="{{ w.header-link }}"><h2>{{ w.header }}</h2></a>
+          {% else %}
+            <h2>{{ w.header }}</h2>
+          {% endif %}
+        </header>
+
+        {% if w.widgetType == 'music' %}
+          {% include music.html embed=w.embed type=w.type title=w.title description=w.description btn-text=w.btn-text btn-link=w.btn-link %}
+        {% endif %}
+
+      </div>
+    </div>
+
+  {% endfor %}
 
 </div>
