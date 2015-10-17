@@ -32,12 +32,12 @@ widgets:
 
         <!-- Music Widget -->
         {% if w == 'music' %}
-          {% include album.html album=site.albums.first %}
+          {% include album.html album=site.albums.last %}
         {% endif %}
 
         <!-- News Widget -->
-        {% if w.widgetType == 'news' %}
-          <p>News coming soon...</p>
+        {% if w == 'news' %}
+          {% include news.html post=site.posts.first %}
         {% endif %}
 
         <!-- Shows Widget -->
