@@ -2,12 +2,18 @@
   description: This is the main gallery for the homepage
   imagefolder: /images/home-gallery
   images:
-  - name: image-1.jpg
-    thumb: thumb-1.jpg
+  - name: 01.jpg
+    thumb: 01-thumb.jpg
     text: The first image
-  - name: image-2.jpg
-    thumb: thumb-2.jpg
+  - name: 02.jpg
+    thumb: 02-thumb.jpg
     text: The second image
-  - name: image-3.jpg
-    thumb: thumb-3.jpg
+  - name: 03.jpg
+    thumb: 03-thumb.jpg
     text: The third image
+  - name: 04.jpg
+    thumb: 04-thumb.jpg
+    text: The fourth image
+  - name: 05.jpg
+    thumb: 05-thumb.jpg
+    text: The fifth image
