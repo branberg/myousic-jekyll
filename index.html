@@ -39,7 +39,7 @@ textWidgetCopy: "aasdfasdf"
         {% endif %}
 
         {% if w == 'shows' %}
-          Shows...
+          {% include shows.html shows=site.shows limit=page.showLimit %}
         {% endif %}
 
         {% if w == 'videos' %}

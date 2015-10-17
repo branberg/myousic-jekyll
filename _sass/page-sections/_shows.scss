@@ -1,0 +1,133 @@
+.shows{
+
+  font-family: $montserrat;
+  width: 100%;
+  font-weight: 300;
+  border-collapse: separate;
+
+}
+
+.show{
+
+  &:first-child td{
+    border-top: solid 2px $black;
+  }
+  td{
+
+    border-bottom: solid 2px $black;
+    font-size: 0.75rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    .cell-wrap{
+
+      padding: $spacer $spacer/2;
+
+      @media (min-width: 768px) {
+        position: relative;
+        height: 100%;
+        padding: $spacer*1.5 $spacer;
+      }
+
+    }
+
+  }
+
+  &__date{
+
+    text-align: center;
+    position: relative;
+
+    @media (min-width: 768px) {
+      width: 126px;
+    }
+
+    .cell-wrap{
+
+      padding: $spacer/2 $spacer;
+
+      @media (min-width: 768px) {
+
+        width: 120px;
+
+        &:after{
+          content: "";
+          border-right: solid 2px $black;
+          width: 1px;
+          position: absolute;
+          right: 0;
+          top: $spacer*2;
+          bottom: $spacer*2;
+        }
+
+      }
+
+    }
+
+  }
+  &__day,
+  &__month{
+    display: block;
+    text-transform: uppercase
+  }
+  &__month{
+
+    font-size: 0.75rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.375rem;
+    }
+    
+  }
+  &__day{
+
+    font-size: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+
+  }
+
+  &__location{
+
+    .cell-wrap{
+      padding-left: $spacer*1.5;
+    }
+
+  }
+  &__title{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__city{
+    display: block;
+  }
+
+  &__tickets{
+
+    text-align: right;
+
+  }
+
+  &__social{
+
+    display: none;
+
+    @media (min-width: 768px) {
+      display: table-cell;
+    }
+
+    ul{
+      text-align: right;
+    }
+    li{
+      display: inline-block;
+    }
+
+  }
+
+}

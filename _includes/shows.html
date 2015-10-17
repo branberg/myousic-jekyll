@@ -1,31 +1,38 @@
-<tr>
-  <td class="tour-date__date">
-    <div class="cell_wrap">
-      <span class="tour-date__month">{{ include.date }}</span>
-      <span class="tour-date__day">{{ include.date }}</span>
-    </div>
-  </td>
-  <td class="tour-date__location">
-    <div class="cell_wrap">
-      <span class="tour-date__venue">{{ include.venue }}</span>
-      <span class="tour-date__city">{{ include.city }}</span>
-    </div>
-  </td>
-  <td class="tour-date__tickets">
-    <div class="cell_wrap">
-      <a href="{{ include.tickets }}">Buy Tickets</a>
-    </div>
-  </td>
-  <td class="tour-date__social">
-    <div class="cell_wrap">
-      <ul>
-        <li class="facebook_share">
-          <a href="{{ include.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li class="twitter_share">
-          <a href="{{ include.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
-        </li>
-      </ul>
-    </div>
-  </td>
-</tr>
+<table class="shows" data-shows-limit="{{include.limit}}">
+  <tbody>
+    {% assign shows = include.shows | sort:"datetime" %}
+    {% for show in shows %}
+      <tr class="show">
+        <td class="show__date">
+          <div class="cell-wrap">
+            <span class="show__month">{{ show.datetime | date: "%b"}}</span>
+            <span class="show__day">{{ show.datetime | date: "%-d" }}</span>
+          </div>
+        </td>
+        <td class="show__location">
+          <div class="cell-wrap">
+            <span class="show__title">{{ show.title }}</span>
+            <span class="show__city">{{ show.location }}</span>
+          </div>
+        </td>
+        <td class="show__tickets">
+          <div class="cell-wrap">
+            <a href="{{ show.tickets }}">Buy Tickets</a>
+          </div>
+        </td>
+        <td class="show__social">
+          <div class="cell-wrap">
+            <ul>
+              <li class="facebook_share">
+                <a href="{{ show.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li class="twitter_share">
+                <a href="{{ show.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
