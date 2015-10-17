@@ -12,3 +12,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+# custom collection types
+collections:
+- albums

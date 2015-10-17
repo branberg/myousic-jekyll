@@ -1,8 +1,16 @@
 ---
 layout: default
+
+#sidgets (sort order)
+widgets:
+  - music
+  - video
 ---
 
 <div class="page">
+
+  <!-- most recent music release -->
+  {{ site.albums.first.title }}
 
   {% for w in site.data.homepageWidgets %}
 
