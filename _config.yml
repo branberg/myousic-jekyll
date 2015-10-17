@@ -17,3 +17,4 @@ markdown: kramdown
 # custom collection types
 collections:
 - albums
+- shows

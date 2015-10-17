@@ -1,19 +1,15 @@
 ---
 layout: default
 title: home
-widgets:
-  - music
-  - news
-  - shows
-  - videos
-  - photos
-  - text:
-    - copy: "asdfa"
+activeWidgets: [music, news, shows, videos, photos, text]
+showLimit: 5
+textWidgetTitle: "About Us"
+textWidgetCopy: "aasdfasdf"
 ---
 
 <div class="page">
 
-  {% for w in page.widgets %}
+  {% for w in page.activeWidgets %}
     
     <div class="page-section">
       <div class="wrap">
@@ -28,6 +24,8 @@ widgets:
             <a href="/videos"><h2>Videos</h2></a>
           {% elsif w == "photos" %}
             <a href="/photos"><h2>Photos</h2></a>
+          {% elsif w == "text" %}
+            <h2>{{ page.textWidgetTitle }}</h2>
           {% endif %}
         </header>
 
@@ -42,14 +40,23 @@ widgets:
         {% endif %}
 
         <!-- Shows Widget -->
-        {% if w.widgetType == 'shows' %}
-          <table class="tour-dates">
-            <tbody>
-              {% for s in w.shows %}
-                {% include shows.html date=s.date venue=s.venue venue-link=s.venu-link city=s.city tickets=s.tickets facebook=s.facebook twitter=s.twitter %}
-              {% endfor %}
-            </tbody>
-          </table>
+        {% if w == 'shows' %}
+          Shows...
+        {% endif %}
+
+        <!-- Videos Widget -->
+        {% if w == 'videos' %}
+          Video...
+        {% endif %}
+
+        <!-- Photos Widget -->
+        {% if w == 'photos' %}
+          Photos...
+        {% endif %}
+
+        <!-- Text Widget -->
+        {% if w == 'text' %}
+          {{ page.textWidgetCopy }}
         {% endif %}
 
       </div>
