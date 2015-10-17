@@ -5,7 +5,7 @@ weight: 0
 activeWidgets: [music, news, shows, videos, photos, text]
 showLimit: 5
 textWidgetTitle: "About Us"
-textWidgetCopy: "Fox &amp; Coyote is an indie folk quartet featuring Ryan Evans (lead vocals, guitar), Jonathan Harms (banjo, vocals), Amy Chatelaine (cello, vocals), and Jimmy Barnett (drums, vocals). The group offers “soaring and haunting” melodies (KAXE Northern Community Radio), “vivid stories” (89.3 The Current), and songs with “warmth and pulse” (City Pages). Building off the success of their debut full-length album, If We Stay (2013), Fox &amp; Coyote is releasing their EP Boardinghouse in May 2015."
+textWidgetCopy: "<p>Fox &amp; Coyote is an indie folk quartet featuring Ryan Evans (lead vocals, guitar), Jonathan Harms (banjo, vocals), Amy Chatelaine (cello, vocals), and Jimmy Barnett (drums, vocals). The group offers “soaring and haunting” melodies (KAXE Northern Community Radio), “vivid stories” (89.3 The Current), and songs with “warmth and pulse” (City Pages). Building off the success of their debut full-length album, <em>If We Stay</em> (2013), Fox &amp; Coyote is releasing their EP <em>Boardinghouse</em> in May 2015.</p>"
 ---
 
 <div class="page">
@@ -51,7 +51,7 @@ textWidgetCopy: "Fox &amp; Coyote is an indie folk quartet featuring Ryan Evans 
         {% endif %}
 
         {% if w == 'text' %}
-          {{ page.textWidgetCopy }}
+          {% include text.html text=page.textWidgetCopy %}
         {% endif %}
 
       </div>

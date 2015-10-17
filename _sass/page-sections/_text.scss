@@ -1,0 +1,17 @@
+.text-block{
+
+  padding: 0 0 $spacer*4 0;
+  line-height: 1.4em;
+
+  & :first-child{margin-top: 0;}
+  & :last-child{margin-bottom: 0;}
+
+  @media (min-width: 480px) {
+    font-size: 1.25em;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.6em;
+  }
+
+}
