@@ -1,0 +1,10 @@
+<div class="video">
+  <div class="video__fluid-wrapper">
+    {{ include.video.embed }}
+  </div>
+  {% if include.video.content %}
+    <div class="video__description">
+      {{ include.video.content }}
+    </div>
+  {% endif %}
+</div>

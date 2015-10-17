@@ -43,7 +43,7 @@ textWidgetCopy: "aasdfasdf"
         {% endif %}
 
         {% if w == 'videos' %}
-          Video...
+          {% include video.html video=site.videos.last %}
         {% endif %}
 
         {% if w == 'photos' %}
