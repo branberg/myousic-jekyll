@@ -1,32 +1,38 @@
 ---
 layout: default
-
-#sidgets (sort order)
 widgets:
   - music
-  - video
+  - news
+  - shows
+  - videos
+  - photos
+  - text:
+    - copy: "asdfa"
 ---
 
 <div class="page">
 
-  <!-- most recent music release -->
-  {{ site.albums.first.title }}
-
-  {% for w in site.data.homepageWidgets %}
-
+  {% for w in page.widgets %}
+    
     <div class="page-section">
       <div class="wrap">
         <header class="page-section__header">
-          {% if w.header-link != "" %}
-            <a href="{{ w.header-link }}"><h2>{{ w.header }}</h2></a>
-          {% else %}
-            <h2>{{ w.header }}</h2>
+          {% if w == "music" %}
+            <a href="/music"><h2>Music</h2></a>
+          {% elsif w == "news" %}
+            <a href="/news"><h2>News</h2></a>
+          {% elsif w == "shows" %}
+            <a href="/shows"><h2>Shows</h2></a>
+          {% elsif w == "videos" %}
+            <a href="/videos"><h2>Videos</h2></a>
+          {% elsif w == "photos" %}
+            <a href="/photos"><h2>Photos</h2></a>
           {% endif %}
         </header>
 
         <!-- Music Widget -->
-        {% if w.widgetType == 'music' %}
-          {% include music.html embed=w.embed type=w.type title=w.title description=w.description btn-text=w.btn-text btn-link=w.btn-link %}
+        {% if w == 'music' %}
+          {% include album.html album=site.albums.first %}
         {% endif %}
 
         <!-- News Widget -->
