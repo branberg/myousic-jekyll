@@ -6,7 +6,7 @@
 
 html, body{
   height: 100%;
-  background: $white;
+  background: $background;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -23,4 +23,19 @@ ul, ol{
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.clearfix:after{
+
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+
+}
+
+.truncate{
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
 }

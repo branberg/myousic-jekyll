@@ -5,7 +5,7 @@
   @include clearfix;
 
   @media (min-width: 480px) {
-    margin-bottom: 40px;
+    margin-bottom: $spacer*2;
   }
 
   &:last-child{
@@ -31,10 +31,10 @@
 
   &__info{
 
-    padding: 20px;
+    padding: $spacer;
 
     @media (min-width: 768px) {
-      padding: 40px;
+      padding: $spacer*2;
       float: left;
       width: 50%;
       position: relative;
@@ -60,7 +60,7 @@
 
     font-size: 1.625rem;
     font-weight: 500;
-    margin: 10px 0;
+    margin: $spacer/2 0;
     color: #aaaaaa;
 
     @media (min-width: 768px) {
@@ -92,21 +92,21 @@
 
     font-size: 1.25rem;
     display: block;
-    margin: 20px 0 0 0;
+    margin: $spacer 0 0 0;
     font-family: $montserrat;
     text-transform: uppercase;
     text-align: center;
     background-color: white;
     color: #212121;
     text-decoration: none;
-    padding: 20px;
+    padding: $spacer;
     @include transition( opacity, 0.05s, linear );
 
     @media (min-width: 768px) {
       position: absolute;
-      bottom: 40px;
-      left: 40px;
-      right: 40px;
+      bottom: $spacer*2;
+      left: $spacer*2;
+      right: $spacer*2;
     }
 
     &--full{
