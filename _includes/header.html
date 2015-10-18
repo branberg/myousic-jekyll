@@ -1,18 +1,45 @@
-<header class="site-header{% if page.id == 'home' %}--homepage{% endif %}">
-  <div class="wrap">
-    <a href="{{ site.baseurl }}/" class="logo--text">{{ site.title }}</a>
-    <nav class="menu-container">
-      {% assign pages = site.pages | sort:"weight" %}
-      <ul class="menu">
-        {% for p in pages %}
-          {% if p.title and p.weight != 0 %}
-            <li class="menu-item"><a class="menu-item__link {% if p.url == page.url  %}current{% endif %}" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ "/bower_components/swipebox/src/css/swipebox.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/bower_components/nivo-lightbox/nivo-lightbox.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/bower_components/nivo-lightbox/themes/default/default.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    <script type='text/javascript' src='{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}'></script>
+
+  </head>
+
+  <body class="{{ page.id }}">
+
+    <div id="site-wrap">
+
+      <header class="site-header{% if page.id == 'home' %}--homepage{% endif %}">
+        <div class="wrap">
+          <a href="{{ site.baseurl }}/" class="logo--text">{{ site.title }}</a>
+          <nav class="menu-container">
+            {% assign pages = site.pages | sort:"weight" %}
+            <ul class="menu">
+              {% for p in pages %}
+                {% if p.title and p.weight != 0 %}
+                  <li class="menu-item"><a class="menu-item__link{% if p.url == page.url  %}--current{% endif %}" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+          {% if page.id != 'home' %}
+            <h1 class="page-title">{{ page.title }}</h1>
           {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
-    {% if page.id != 'home' %}
-      <h1 class="page-title">{{ page.title }}</h1>
-    {% endif %}
-  </div>
-</header>
+        </div>
+      </header>

@@ -1,30 +1,9 @@
-<!DOCTYPE html>
-<html>
+{% include header.html %}
 
-  {% include head.html %}
+<div class="page-content">
+  <div class="wrap">
+    {{ content }}
+  </div>
+</div>
 
-  <body class="{{ page.id }}">
-
-    <div id="site-wrap">
-
-      {% include header.html %}
-
-      <div class="page-content">
-        <div class="wrap">
-          {{ content }}
-        </div>
-      </div>
-
-      {% include footer.html %}
-
-    </div><!-- / .site-wrap -->
-
-  </body>
-
-  <!-- scripty scripts -->
-  <script type='text/javascript' src='bower_components/fitvids/jquery.fitvids.js'></script>
-  <script type='text/javascript' src='bower_components/swipebox/src/js/jquery.swipebox.min.js'></script>
-  <script type='text/javascript' src='bower_components/nivo-lightbox/nivo-lightbox.min.js'></script>
-  <script type='text/javascript' src='js/main.js'></script>
-
-</html>
+{% include footer.html %}

@@ -1,18 +1,30 @@
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="mailing-list">
-      <span class="mailing-list__title">Mailing List</span>
-      <form class="mailing-list__form">
-        <input class="mailing-list__input--text" type="text" placeholder="Enter your email address" />
-        <button class="mailing-list__input--submit" type="submit">Submit</button>
-      </form>
-    </div>
-    <ul class="social-links">
-      <li class="social-link"><a href="https://www.facebook.com/foxandcoyote" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-      <li class="social-link"><a href="http://twitter.com/foxandcoyote/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-      <li class="social-link"><a href="http://instagram.com/foxandcoyote/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-      <li class="social-link"><a href="http://youtube.com/foxandcoyoteband/" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
-    </ul>
-    <p class="site-credits">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
-  </div>
-</footer>
+      <footer class="site-footer">
+        <div class="wrap">
+          <div class="mailing-list">
+            <span class="mailing-list__title">Mailing List</span>
+            <form class="mailing-list__form">
+              <input class="mailing-list__input--text" type="text" placeholder="Enter your email address" />
+              <button class="mailing-list__input--submit" type="submit">Submit</button>
+            </form>
+          </div>
+          <ul class="social-links">
+            <li class="social-link"><a href="https://www.facebook.com/foxandcoyote" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="social-link"><a href="http://twitter.com/foxandcoyote/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-link"><a href="http://instagram.com/foxandcoyote/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+            <li class="social-link"><a href="http://youtube.com/foxandcoyoteband/" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+          <p class="site-credits">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        </div>
+      </footer>
+
+    </div><!-- / .site-wrap -->
+
+  </body>
+
+  <!-- scripty scripts -->
+  <script type='text/javascript' src='{{ "/bower_components/fitvids/jquery.fitvids.js" | prepend: site.baseurl }}'></script>
+  <script type='text/javascript' src='{{ "/bower_components/swipebox/src/js/jquery.swipebox.min.js" | prepend: site.baseurl }}'></script>
+  <script type='text/javascript' src='{{ "/bower_components/nivo-lightbox/nivo-lightbox.min.js" | prepend: site.baseurl }}'></script>
+  <script type='text/javascript' src='{{ "/js/main.js" | prepend: site.baseurl }}'></script>
+
+</html>
