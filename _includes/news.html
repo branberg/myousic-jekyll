@@ -1,0 +1,14 @@
+<div class="news-article">
+  <header class="news-article__header clearfix">
+    <h3 class="news-article__title truncate"><a href="{{ include.post.url | prepend: site.baseurl }}">{{ include.post.title }}</a></h3>
+    <time class="news-article__date" datetime="{{ include.post.date }}">{{ include.post.date | date: "%b %-d" }}</time>
+  </header>
+  <div class="news-article__content">
+    {% if page.title == 'home' %}
+      <p class="news-article__excerpt">{{ include.post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+    {% else %}
+      {{ include.post.content }}
+    {% endif %}
+    <a class="news-article__post-link button__read-more" href="{{ include.post.url | prepend: site.baseurl }}">Read More &raquo;</a>
+  </div>
+</div>

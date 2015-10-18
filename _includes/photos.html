@@ -1,0 +1,11 @@
+<ul class="photo-gallery clearfix">
+  {% for gallery in include.gallery %}
+    {% for image in gallery.images %}
+      <li>
+        <a href="{{ site.baseurl }}{{ gallery.imagefolder }}/{{ image.name }}" data-lightbox-gallery="{{ gallery.id }}" class="lightbox">
+          <img src="{{ site.baseurl }}{{ gallery.imagefolder }}/{{ image.thumb }}" alt="{{ image.title }}">
+        </a>
+      </li>
+    {% endfor %}
+  {% endfor %}
+</ul>

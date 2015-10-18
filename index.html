@@ -1,23 +1,62 @@
 ---
 layout: default
+title: home
+weight: 0
+activeWidgets: [music, news, shows, videos, photos, text]
+showLimit: 5
+textWidgetTitle: "About Us"
+textWidgetCopy: "<p>Fox &amp; Coyote is an indie folk quartet featuring Ryan Evans (lead vocals, guitar), Jonathan Harms (banjo, vocals), Amy Chatelaine (cello, vocals), and Jimmy Barnett (drums, vocals). The group offers “soaring and haunting” melodies (KAXE Northern Community Radio), “vivid stories” (89.3 The Current), and songs with “warmth and pulse” (City Pages). Building off the success of their debut full-length album, <em>If We Stay</em> (2013), Fox &amp; Coyote is releasing their EP <em>Boardinghouse</em> in May 2015.</p>"
 ---
 
-<div class="home">
+<div class="page">
 
-  <h1 class="page-heading">Posts</h1>
+  {% for w in page.activeWidgets %}
+    
+    <div class="page-section--{{ w }}">
+      <div class="wrap">
+        <header class="page-section__header">
+          {% if w == "music" %}
+            <a href="{{ site.baseurl }}/music"><h2>Music</h2></a>
+          {% elsif w == "news" %}
+            <a href="{{ site.baseurl }}/news"><h2>News</h2></a>
+          {% elsif w == "shows" %}
+            <a href="{{ site.baseurl }}/shows"><h2>Shows</h2></a>
+          {% elsif w == "videos" %}
+            <a href="{{ site.baseurl }}/videos"><h2>Videos</h2></a>
+          {% elsif w == "photos" %}
+            <h2>Photos</h2>
+          {% elsif w == "text" %}
+            <h2>{{ page.textWidgetTitle }}</h2>
+          {% endif %}
+        </header>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% if w == 'music' %}
+          {% include album.html album=site.albums.last %}
+        {% endif %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        {% if w == 'news' %}
+          {% include news.html post=site.posts.first %}
+        {% endif %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        {% if w == 'shows' %}
+          {% include shows.html shows=site.shows limit=page.showLimit %}
+        {% endif %}
+
+        {% if w == 'videos' %}
+          {% include video.html video=site.videos.last %}
+        {% endif %}
+
+        {% if w == 'photos' %}
+          {% include photos.html gallery=site.data.galleries %}
+        {% endif %}
+
+        {% if w == 'text' %}
+          {% include text.html text=page.textWidgetCopy %}
+        {% endif %}
+
+      </div>
+    </div>
+
+  {% endfor %}
 
 </div>

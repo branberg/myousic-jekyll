@@ -9,6 +9,14 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown
+
+# custom collection types
+collections:
+- albums
+- shows
+- videos
+- photos

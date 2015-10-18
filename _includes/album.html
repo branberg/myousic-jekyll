@@ -1,0 +1,13 @@
+<div class="album">
+  <div class="album__embed">
+    {{ include.album.embed }}
+  </div>
+  <div class="album__info">
+    <span class="album__type">{{ include.album.type }}</span>
+    <h3 class="album__title">{{ include.album.title }}</h3>
+    <div class="album__description">
+      {{ include.album.content }}
+    </div>
+    <a href="{{ include.album.downloadLink }}" class="album__button--full">Download</a>
+  </div>
+</div>

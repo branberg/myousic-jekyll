@@ -138,17 +138,17 @@ jQuery(document).ready(function($) {
   /*************************************************************************
   Keep Album dimensions equal no matter what
   *************************************************************************/
-  $('.soundcloud_embed').keepSquare();
+  $('.album__embed').keepSquare();
   if( windowWidth > 768 ){
-    $('.album_info_wrapper').keepSquare();
+    $('.album__info').keepSquare();
   }
   $(window).resize(function(){
     var windowWidth = $(window).width();
-    $('.soundcloud_embed').keepSquare();
+    $('.album__embed').keepSquare();
     if( windowWidth > 768 ){
-      $('.album_info_wrapper').keepSquare();
+      $('.album__info').keepSquare();
     } else {
-      $('.album_info_wrapper').height('auto');
+      $('.album__info').height('auto');
     }
   });
 

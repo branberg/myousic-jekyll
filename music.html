@@ -5,4 +5,14 @@ permalink: /music/
 weight: 1
 ---
 
-MUSIC
+<div class="page-section">
+  <div class="wrap">
+
+    {% for album in site.albums reversed %}
+
+      {% include album.html album=album %}
+
+    {% endfor %}
+
+  </div>
+</div>

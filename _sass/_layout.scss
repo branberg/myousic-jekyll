@@ -6,7 +6,12 @@
 
   @media (min-width: 768px) {
     max-width: 94.79%;
-    padding: 0 20px;
+    padding: 0 $spacer;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 940px;
+    padding: 0 $spacer/2;
   }
 
 }
@@ -14,7 +19,7 @@
 #site-wrap{
 
   position: relative;
-  background: $white;
+  background: $background;
   min-height: 100%;
 
   &.open{

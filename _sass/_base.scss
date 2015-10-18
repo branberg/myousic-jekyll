@@ -6,7 +6,13 @@
 
 html, body{
   height: 100%;
-  background: $white;
+  background: $background;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $montserrat;
+  font-weight: 500;
 }
 
 a{
@@ -17,4 +23,19 @@ ul, ol{
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.clearfix:after{
+
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+
+}
+
+.truncate{
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
 }
