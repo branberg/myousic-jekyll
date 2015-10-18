@@ -66,13 +66,21 @@
 
   @media (min-width: 768px) {
 
+    // display: block;
+    // position: absolute;
+    // z-index: 100;
+    // top: 20px;
+    // left: 0;
+    // right: 0;
+    // max-width: 100%;
+
+    float: right;
     display: block;
-    position: absolute;
-    z-index: 100;
-    top: 20px;
-    left: 0;
-    right: 0;
-    max-width: 100%;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    max-width: 75%;
 
   }
 
@@ -83,7 +91,6 @@
 .menu-item{
 
   text-transform: uppercase;
-  color: $white;
   font-weight: 300;
   display: inline-block;
   position: relative;
@@ -91,6 +98,7 @@
 
   &__link{
 
+    color: $white;
     display: inline-block;
     padding: 0.625em 1em;
     text-decoration: none;
@@ -98,7 +106,7 @@
     @include transition( color, 0.15s, linear );
 
     &:hover{
-      color: $white;
+      color: $black;
     }
 
   }

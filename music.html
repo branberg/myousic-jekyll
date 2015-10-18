@@ -1,18 +1,13 @@
 ---
+id: music
 layout: default
 title: Music
 permalink: /music/
 weight: 1
 ---
 
-<div class="page-section">
-  <div class="wrap">
+{% for album in site.albums reversed %}
 
-    {% for album in site.albums reversed %}
+  {% include album.html album=album %}
 
-      {% include album.html album=album %}
-
-    {% endfor %}
-
-  </div>
-</div>
+{% endfor %}

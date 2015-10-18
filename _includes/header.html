@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header{% if page.id == 'home' %}--homepage{% endif %}">
   <div class="wrap">
     <a href="{{ site.baseurl }}/" class="logo--text">{{ site.title }}</a>
     <nav class="menu-container">
@@ -11,5 +11,8 @@
         {% endfor %}
       </ul>
     </nav>
+    {% if page.id != 'home' %}
+      <h1 class="page-title">{{ page.title }}</h1>
+    {% endif %}
   </div>
 </header>

@@ -27,3 +27,20 @@
   }
 
 }
+
+.page-content{
+
+  > .wrap{
+
+    @media (min-width: 768px) {
+      position: relative;
+      margin-top: -200px;
+      padding: 0 0 40px 0;
+      z-index: 100;
+      background-color: $background;
+      min-height: 400px;
+    }
+
+  }
+
+}

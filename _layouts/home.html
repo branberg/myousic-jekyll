@@ -1,14 +1,29 @@
 ---
 layout: home
 ---
-<div class="post">
+<!DOCTYPE html>
+<html>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+  {% include head.html %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+  <body class="{{ page.id }}">
 
-</div>
+    <div id="site-wrap">
+
+      {% include header.html %}
+
+      {{ content }}
+
+      {% include footer.html %}
+
+    </div><!-- / .site-wrap -->
+
+  </body>
+
+  <!-- scripty scripts -->
+  <script type='text/javascript' src='bower_components/fitvids/jquery.fitvids.js'></script>
+  <script type='text/javascript' src='bower_components/swipebox/src/js/jquery.swipebox.min.js'></script>
+  <script type='text/javascript' src='bower_components/nivo-lightbox/nivo-lightbox.min.js'></script>
+  <script type='text/javascript' src='js/main.js'></script>
+
+</html>
