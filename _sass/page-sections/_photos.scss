@@ -1,0 +1,59 @@
+.page-section--photos{
+  .wrap{
+    max-width: 100%;
+    padding: 0;
+  }
+  .page-section__header{
+
+    max-width: 87.5%;
+    margin: $spacer*4 auto $spacer*2 auto;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      max-width: 94.79%;
+      padding: 0 $spacer;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 940px;
+      padding: 0 $spacer/2;
+    }
+
+  }
+}
+.photo-gallery{
+  
+  li{
+
+    display: block;
+    list-style-type: none;
+    float: left;
+    width: 50%;
+
+    @media (min-width: 480px) {
+      width: 33.333%;
+    }
+
+    @media (min-width: 768px) {
+      width: 25%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 20%;
+    }
+
+  }
+
+  a{
+    display: block;
+    -webkit-backface-visibility: hidden;
+    @include transition( opacity, 0.05s, ease-in-out );
+  }
+
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+}

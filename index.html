@@ -12,7 +12,7 @@ textWidgetCopy: "<p>Fox &amp; Coyote is an indie folk quartet featuring Ryan Eva
 
   {% for w in page.activeWidgets %}
     
-    <div class="page-section">
+    <div class="page-section--{{ w }}">
       <div class="wrap">
         <header class="page-section__header">
           {% if w == "music" %}
@@ -47,9 +47,7 @@ textWidgetCopy: "<p>Fox &amp; Coyote is an indie folk quartet featuring Ryan Eva
         {% endif %}
 
         {% if w == 'photos' %}
-          
-          working on it...
-
+          {% include photos.html gallery=site.data.galleries %}
         {% endif %}
 
         {% if w == 'text' %}
