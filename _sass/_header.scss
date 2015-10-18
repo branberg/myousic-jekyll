@@ -7,15 +7,40 @@
   -o-background-size: cover;
   background-size: cover;
 
+  @media (min-width: 768px) {
+    padding-top: $spacer*1.5;
+  }
+
+  .wrap{
+    position: relative;
+    z-index: 10;
+    height: 100%;
+  }
+
   // homepage varient
   &--homepage{
 
     @extend .site-header;
 
-    .logo--text{
+    .logo{
 
-    }
-    .menu-container{
+      display: block;
+      padding: $spacer*3 $spacer;
+      text-align: center;
+      max-width: 100%;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        font-size: 3em;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 4em;
+        padding: 0;
+        float: none;
+        max-width: 70%;
+        margin: 200px auto;
+      }
 
     }
 
@@ -26,36 +51,57 @@
 .logo{
 
   display: block;
-  font-family: 'Montserrat', sans-serif;
-  margin: 60px 20px;
-  color: $black;
+  float: left;
+  max-width: 22%;
+  font-family: $montserrat;
+  color: white;
   text-decoration: none;
   font-size: 2em;
-  text-align: center;
-
-  &--text{
-    // todo
-    @extend .logo;
-  }
-  &--image{
-    // todo
-    @extend .logo;
-  }
-
-  @media (min-width: 480px) {
-    font-size: 3em;
-    margin: 100px auto;
-  }
+  text-align: left;
 
   @media (min-width: 768px) {
-    font-size: 4em;
-    margin: 200px auto;
-    max-width: 70%;
+
+    font-size: 1.6em;
+    -webkit-backface-visibility: hidden;
+    @include transition( all, 0.15s, ease-in-out );
+
   }
 
-  @media (min-width: 1024px) {
-    font-size: 6em;
-    margin: 300px auto;
+  &--text{
+
+    @extend .logo;
+
+    &:hover{
+      color: $black;
+    }
+
+  }
+  &--image{
+    
+    @extend .logo;
+
+    &:hover{
+      opacity: 0.65;
+    }
+
+  }
+
+}
+
+.page-title{
+
+  display: block;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  padding: 116px 20px 60px 20px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 80px 0 300px 0;
+    clear: both;
   }
 
 }
