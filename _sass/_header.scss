@@ -25,8 +25,10 @@
     .logo{
 
       display: block;
-      padding: 116px $spacer $spacer*3 $spacer;
+      padding: $spacer*3 $spacer;
       text-align: center;
+      max-width: 100%;
+      width: 100%;
 
       @media (min-width: 768px) {
         font-size: 3em;
@@ -39,9 +41,6 @@
         max-width: 70%;
         margin: 200px auto;
       }
-
-    }
-    .menu-container{
 
     }
 
@@ -60,6 +59,14 @@
   font-size: 2em;
   text-align: left;
 
+  @media (min-width: 768px) {
+
+    font-size: 1.6em;
+    -webkit-backface-visibility: hidden;
+    @include transition( all, 0.15s, ease-in-out );
+
+  }
+
   &--text{
 
     @extend .logo;
@@ -76,14 +83,6 @@
     &:hover{
       opacity: 0.65;
     }
-
-  }
-
-  @media (min-width: 768px) {
-
-    font-size: 1.6em;
-    -webkit-backface-visibility: hidden;
-    @include transition( all, 0.15s, ease-in-out );
 
   }
 
