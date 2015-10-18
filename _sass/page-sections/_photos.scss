@@ -45,9 +45,15 @@
   }
 
   a{
+
     display: block;
     -webkit-backface-visibility: hidden;
     @include transition( opacity, 0.05s, ease-in-out );
+
+    &:hover{
+      opacity: 0.6;
+    }
+
   }
 
   img{

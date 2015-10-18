@@ -16,15 +16,15 @@ textWidgetCopy: "<p>Fox &amp; Coyote is an indie folk quartet featuring Ryan Eva
       <div class="wrap">
         <header class="page-section__header">
           {% if w == "music" %}
-            <a href="/music"><h2>Music</h2></a>
+            <a href="{{ site.baseurl }}/music"><h2>Music</h2></a>
           {% elsif w == "news" %}
-            <a href="/news"><h2>News</h2></a>
+            <a href="{{ site.baseurl }}/news"><h2>News</h2></a>
           {% elsif w == "shows" %}
-            <a href="/shows"><h2>Shows</h2></a>
+            <a href="{{ site.baseurl }}/shows"><h2>Shows</h2></a>
           {% elsif w == "videos" %}
-            <a href="/videos"><h2>Videos</h2></a>
+            <a href="{{ site.baseurl }}/videos"><h2>Videos</h2></a>
           {% elsif w == "photos" %}
-            <a href="/photos"><h2>Photos</h2></a>
+            <h2>Photos</h2>
           {% elsif w == "text" %}
             <h2>{{ page.textWidgetTitle }}</h2>
           {% endif %}
