@@ -24,6 +24,22 @@
 
     .logo{
 
+      display: block;
+      padding: 116px $spacer $spacer*3 $spacer;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 3em;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 4em;
+        padding: 0;
+        float: none;
+        max-width: 70%;
+        margin: 200px auto;
+      }
+
     }
     .menu-container{
 
@@ -45,23 +61,29 @@
   text-align: left;
 
   &--text{
-    // todo
+
     @extend .logo;
+
+    &:hover{
+      color: $black;
+    }
+
   }
   &--image{
-    // todo
+    
     @extend .logo;
+
+    &:hover{
+      opacity: 0.65;
+    }
+
   }
 
   @media (min-width: 768px) {
 
     font-size: 1.6em;
     -webkit-backface-visibility: hidden;
-    @include transition( opacity, 0.15s, ease-in-out );
-
-    &:hover{
-      opacity: 0.65;
-    }
+    @include transition( all, 0.15s, ease-in-out );
 
   }
 
