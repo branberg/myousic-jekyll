@@ -1,5 +1,4 @@
-- id: homepageGallery
-  description: This is the main gallery for the homepage
+- description: This is the main gallery for the homepage
   imagefolder: /images/home-gallery
   images:
   - name: 01.jpg
