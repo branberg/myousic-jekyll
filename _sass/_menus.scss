@@ -1,7 +1,7 @@
 // setup for mobile menu
 #mobile-menu{
 
-  background-color: $black;
+  background-color: $mobile_menu_bg;
   position: fixed;
   top: 0;
   right: 0;
@@ -28,7 +28,7 @@
     padding: 20px;
     font-size: 1.2em;
     opacity: 1;
-    color: #f9d36b;
+    color: $mobile_menu_text;
     @include transition( opacity, 0.05s, linear );
 
     &:hover{
@@ -48,7 +48,7 @@
   left: 0;
   width: 60px;
   height: 60px;
-  color: $black;
+  color: $text_primary;
   z-index: 100;
   font-size: 1.5em;
   opacity: 0.75;
@@ -106,7 +106,7 @@
 
   &__link{
 
-    color: $black;
+    color: $menu_text;
     display: inline-block;
     padding: 0.625em 1em;
     text-decoration: none;

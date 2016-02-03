@@ -10,11 +10,11 @@
 .show{
 
   &:first-child td{
-    border-top: solid 2px #e2e2e2;
+    border-top: solid 2px $show_border_color;
   }
   td{
 
-    border-bottom: solid 2px #e2e2e2;
+    border-bottom: solid 2px $show_border_color;
     font-size: 0.75rem;
 
     @media (min-width: 768px) {
@@ -54,7 +54,7 @@
 
         &:after{
           content: "";
-          border-right: solid 2px $black;
+          border-right: solid 2px $show_border_color;
           width: 1px;
           position: absolute;
           right: 0;

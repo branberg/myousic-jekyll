@@ -10,7 +10,7 @@ button,
 
   &__read-more{
     @extend .button;
-    border: solid 1px $black;
+    border: solid 1px $text_primary;
     padding: 10px 20px;
     font-size: 1.125rem;
     border-radius: 6px;

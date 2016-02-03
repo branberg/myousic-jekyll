@@ -1,8 +1,8 @@
 .site-footer{
 
-  color: #999999;
+  color: $footer_text;
   padding: 40px 0;
-  background-color: #333333;
+  background-color: $footer_bg;
   font-family: $montserrat;
 
   @media (min-width: 480px) {
