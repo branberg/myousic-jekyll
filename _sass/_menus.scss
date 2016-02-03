@@ -27,12 +27,12 @@
     display: block;
     padding: 20px;
     font-size: 1.2em;
-    opacity: 0.55;
-    color: $white;
+    opacity: 1;
+    color: #f9d36b;
     @include transition( opacity, 0.05s, linear );
 
     &:hover{
-      opacity: 1;
+      opacity: 0.8;
     }
 
   }
@@ -106,20 +106,20 @@
 
   &__link{
 
-    color: $white;
+    color: $black;
     display: inline-block;
     padding: 0.625em 1em;
     text-decoration: none;
     -webkit-backface-visibility: hidden;
-    @include transition( color, 0.15s, linear );
+    @include transition( opacity, 0.15s, ease-in-out );
 
     &:hover{
-      color: $black;
+      opacity: 0.85;
     }
 
     &--current{
       @extend .menu-item__link;
-      color: $black;
+      opacity: 0.85;
     }
 
   }

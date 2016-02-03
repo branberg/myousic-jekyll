@@ -10,11 +10,11 @@
 .show{
 
   &:first-child td{
-    border-top: solid 2px $black;
+    border-top: solid 2px #e2e2e2;
   }
   td{
 
-    border-bottom: solid 2px $black;
+    border-bottom: solid 2px #e2e2e2;
     font-size: 0.75rem;
 
     @media (min-width: 768px) {

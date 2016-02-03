@@ -6,4 +6,8 @@ permalink: /videos/
 weight: 3
 ---
 
-VIDEOS
+{% for video in site.videos %}
+
+  {% include video.html video=video %}
+
+{% endfor %}

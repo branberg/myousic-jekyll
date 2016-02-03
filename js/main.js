@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
   /****************************************************************
   Build mobile menu
   ****************************************************************/
-  $('.site-header .menu-container').mobileMenu();
+  $('[class^=site-header] .menu-container').mobileMenu();
 
   /****************************************************************
   Animate the menu stuff
