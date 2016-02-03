@@ -2,35 +2,32 @@
 //  Colors
 //------------------------------------------------------------------
 // General Site
-$white:                       #ffffff;
-$black:                       #1e1905;
-$background:                  #f8f8f8;
-$text_primary:                #1e1905;
+$background:                  #1a1a1a;
+$text_primary:                #fbc926;
 $button_bg_color:             #e5b335;
 $button_text_color:           #1e1905;
 
 // Header
-$header_bg_overlay:           #f9d36b;
-$header_bg_opacity:           0.8;
-$header_bg_image:             url("/images/into-bg-01.jpg");
-
-// Main (desktop) menu
-$menu_text:                   #1e1905;
+$header_bg_color:             #000000;
+$header_bg_overlay:           #000000;
+$header_bg_opacity:           0;
+$header_bg_image:             url("/images/intro-bg-01.jpg");
+$header_text_color:           #fbc926;
 
 // Mobile Menu
-$mobile_menu_bg:              #1e1905;
-$mobile_menu_text:            #f9d36b;
+$mobile_menu_bg:              #111111;
+$mobile_menu_text:            #fbc926;
 
 // Music Album Embeds
-$music_bg_color:              #f9d36b;
-$music_text_color:            #1e1905;
+$music_bg_color:              #fbc926;
+$music_text_color:            #000000;
 
 // Show Borders
-$show_border_color:           #e2e2e2;
+$show_border_color:           #333333;
 
 // Footer
-$footer_bg:                   #333333;
-$footer_text:                 #999999;
+$footer_bg:                   #0a0a0a;
+$footer_text:                 #4f4f4f;
 
 //------------------------------------------------------------------
 //  Fonts

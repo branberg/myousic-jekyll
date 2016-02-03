@@ -48,7 +48,6 @@
   left: 0;
   width: 60px;
   height: 60px;
-  color: $text_primary;
   z-index: 100;
   font-size: 1.5em;
   opacity: 0.75;
@@ -106,7 +105,7 @@
 
   &__link{
 
-    color: $menu_text;
+    color: $header_text_color;
     display: inline-block;
     padding: 0.625em 1em;
     text-decoration: none;
