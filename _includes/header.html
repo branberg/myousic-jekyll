@@ -27,7 +27,10 @@
 
       <header class="site-header{% if page.id == 'home' %}--homepage{% endif %}">
         <div class="wrap">
+
           <a href="{{ site.baseurl }}/" class="logo--text">{{ site.title }}</a>
+          <!-- <a href="{{ site.baseurl }}/" class="logo--image"><img src="/images/logo-test.png"></a> -->
+
           <nav class="menu-container">
             {% assign pages = site.pages | sort:"weight" %}
             <ul class="menu">

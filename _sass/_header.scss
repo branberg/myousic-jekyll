@@ -64,15 +64,20 @@
 
   display: block;
   float: left;
-  max-width: 22%;
   font-family: $montserrat;
   color: $header_text_color;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.2em;
   text-align: left;
+  position: absolute;
+  top: 20px;
+  left: 26px;
 
   @media (min-width: 768px) {
 
+    position: relative;
+    top: auto;
+    left: auto;
     font-size: 1.6em;
     -webkit-backface-visibility: hidden;
     @include transition( all, 0.15s, ease-in-out );
@@ -91,6 +96,12 @@
   &--image{
     
     @extend .logo;
+
+    img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 
     &:hover{
       opacity: 0.65;
