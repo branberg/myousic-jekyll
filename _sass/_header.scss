@@ -27,36 +27,39 @@
     z-index: 10;
   }
 
-  // homepage varient
-  &--homepage {
+}
 
-    @extend %site-header;
+// homepage varient
+.site-header--homepage {
 
-    .logo {
+  @extend %site-header;
 
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      padding: ($spacer * 3) $spacer;
-      text-align: center;
+  .logo,
+  .logo--text,
+  .logo--image {
 
-      @media (min-width: 768px) {
-        font-size: 3em;
-      }
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: ($spacer * 3) $spacer;
+    text-align: center;
 
-      @media (min-width: 768px) {
-        max-width: 70%;
-        margin: 200px auto;
-        padding: 0;
-        float: none;
-        font-size: 4em;
-      }
+    @media (min-width: 768px) {
+      font-size: 3em;
+    }
 
+    @media (min-width: 768px) {
+      max-width: 70%;
+      margin: 200px auto;
+      padding: 0;
+      float: none;
+      font-size: 4em;
     }
 
   }
 
 }
+
 
 .logo,
 %logo {
@@ -82,30 +85,30 @@
 
   }
 
-  &--text {
+}
 
-    @extend %logo;
+.logo--text {
 
-    &:hover {
-      opacity: 0.8;
-    }
+  @extend %logo;
 
+  &:hover {
+    opacity: 0.8;
   }
 
-  &--image {
+}
 
-    @extend %logo;
+.logo--image {
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+  @extend %logo;
 
-    &:hover {
-      opacity: 0.65;
-    }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 
+  &:hover {
+    opacity: 0.65;
   }
 
 }
