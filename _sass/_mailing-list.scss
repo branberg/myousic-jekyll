@@ -10,7 +10,7 @@
   &__title{
 
     display: block;
-    color: $footer_text;
+    color: $footer-text;
     text-transform: uppercase;
     font-size: 1.4em;
     margin: 0 0 20px 0;
@@ -30,7 +30,7 @@
   &__form{
 
     display: block;
-    color: $footer_text;
+    color: $footer-text;
     font-size: 1.125em;
     overflow: hidden;
 
@@ -46,7 +46,7 @@
   }
   &__input{
 
-    border: solid 2px $footer_text;
+    border: solid 2px $footer-text;
     display: block;
     padding: 15px;
     outline: none;
@@ -62,7 +62,7 @@
       width: 100%;
       background: none;
       margin-bottom: 10px;
-      color: $footer_text;
+      color: $footer-text;
 
       @media (min-width: 768px) {
         width: 280px;
@@ -77,7 +77,7 @@
 
       @extend .mailing-list__input;
       text-transform: uppercase;
-      background-color: $footer_text;
+      background-color: $footer-text;
       color: #333333;
       width: 100%;
 

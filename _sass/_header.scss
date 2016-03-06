@@ -1,6 +1,6 @@
 .site-header{
 
-  background: $header_bg_color $header_bg_image 50% 50% no-repeat;
+  background: $header-bg-color $header-bg-image 50% 50% no-repeat;
   position: relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -19,8 +19,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: $header_bg_overlay;
-    opacity: $header_bg_opacity;
+    background: $header-bg-overlay;
+    opacity: $header-bg-opacity;
   }
 
   .wrap{
@@ -65,7 +65,7 @@
   display: block;
   float: left;
   font-family: $montserrat;
-  color: $header_text_color;
+  color: $header-text-color;
   text-decoration: none;
   font-size: 1.2em;
   text-align: left;
@@ -116,7 +116,7 @@
   display: block;
   font-size: 2em;
   text-transform: uppercase;
-  color: $header_text_color;
+  color: $header-text-color;
   text-align: center;
   padding: 116px 20px 60px 20px;
   font-family: "Montserrat", sans-serif;

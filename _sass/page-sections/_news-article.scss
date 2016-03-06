@@ -11,8 +11,8 @@
     right: 0;
     bottom: $spacer*2;
     left: 0;
-    @include gradient(linear,top,rgba($text_primary, 1.00),rgba($background, 0.00),'left top, left bottom');
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$text_primary}', EndColorStr='#{$background}');
+    @include gradient(linear,top,rgba($text-primary, 1.00),rgba($background, 0.00),'left top, left bottom');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$text-primary}', EndColorStr='#{$background}');
 
   }
 
