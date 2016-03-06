@@ -1,65 +1,66 @@
-.shows{
+.shows {
 
-  font-family: $montserrat;
   width: 100%;
+  font-family: $montserrat;
   font-weight: 300;
   border-collapse: separate;
 
 }
 
-.show{
+.show {
 
-  &:first-child td{
-    border-top: solid 2px $show_border_color;
+  &:first-child td {
+    border-top: solid 2px $show-border-color;
   }
-  td{
 
-    border-bottom: solid 2px $show_border_color;
+  td {
+
+    border-bottom: solid 2px $show-border-color;
     font-size: 0.75rem;
 
     @media (min-width: 768px) {
       font-size: 1.25rem;
     }
 
-    .cell-wrap{
+    .cell-wrap {
 
-      padding: $spacer $spacer/2;
+      padding: $spacer ($spacer / 2);
 
       @media (min-width: 768px) {
         position: relative;
         height: 100%;
-        padding: $spacer*1.5 $spacer;
+        padding: ($spacer * 1.5) $spacer;
       }
 
     }
 
   }
 
-  &__date{
+  &__date {
 
-    text-align: center;
     position: relative;
+    text-align: center;
 
     @media (min-width: 768px) {
       width: 126px;
     }
 
-    .cell-wrap{
+    .cell-wrap {
 
-      padding: $spacer/2 $spacer;
+      padding: ($spacer / 2) $spacer;
 
       @media (min-width: 768px) {
 
         width: 120px;
 
-        &:after{
-          content: "";
-          border-right: solid 2px $show_border_color;
-          width: 1px;
+        &::after {
           position: absolute;
+          top: $spacer * 2;
           right: 0;
-          top: $spacer*2;
-          bottom: $spacer*2;
+          bottom: $spacer * 2;
+          width: 1px;
+          border-right: solid 2px $show-border-color;
+          content: '';
         }
 
       }
@@ -67,21 +68,24 @@
     }
 
   }
+
   &__day,
-  &__month{
+  &__month {
     display: block;
-    text-transform: uppercase
+    text-transform: uppercase;
   }
-  &__month{
+
+  &__month {
 
     font-size: 0.75rem;
 
     @media (min-width: 768px) {
       font-size: 1.375rem;
     }
-    
+
   }
-  &__day{
+
+  &__day {
 
     font-size: 1rem;
 
@@ -91,29 +95,31 @@
 
   }
 
-  &__location{
+  &__location {
 
-    .cell-wrap{
-      padding-left: $spacer*1.5;
+    .cell-wrap {
+      padding-left: $spacer * 1.5;
     }
 
   }
-  &__title{
+
+  &__title {
     display: block;
-    text-transform: uppercase;
     font-weight: 700;
+    text-transform: uppercase;
   }
-  &__city{
+
+  &__city {
     display: block;
   }
 
-  &__tickets{
+  &__tickets {
 
     text-align: right;
 
   }
 
-  &__social{
+  &__social {
 
     display: none;
 
@@ -121,10 +127,11 @@
       display: table-cell;
     }
 
-    ul{
+    ul {
       text-align: right;
     }
-    li{
+
+    li {
       display: inline-block;
     }
 

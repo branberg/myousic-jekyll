@@ -1,12 +1,14 @@
-.page-section--photos{
-  .wrap{
+.page-section--photos {
+
+  .wrap {
     max-width: 100%;
     padding: 0;
   }
-  .page-section__header{
+
+  .page-section__header {
 
     max-width: 87.5%;
-    margin: $spacer*4 auto $spacer*2 auto;
+    margin: ($spacer * 4) auto ($spacer * 2);
     overflow: hidden;
 
     @media (min-width: 768px) {
@@ -16,19 +18,20 @@
 
     @media (min-width: 1024px) {
       max-width: 940px;
-      padding: 0 $spacer/2;
+      padding: 0 ($spacer / 2);
     }
 
   }
 }
-.photo-gallery{
-  
-  li{
+
+.photo-gallery {
+
+  li {
 
     display: block;
-    list-style-type: none;
-    float: left;
     width: 50%;
+    float: left;
+    list-style-type: none;
 
     @media (min-width: 480px) {
       width: 33.333%;
@@ -44,19 +47,18 @@
 
   }
 
-  a{
+  a {
 
     display: block;
-    -webkit-backface-visibility: hidden;
-    @include transition( opacity, 0.05s, ease-in-out );
+    transition: opacity 0.05s ease-in-out;
 
-    &:hover{
+    &:hover {
       opacity: 0.6;
     }
 
   }
 
-  img{
+  img {
     display: block;
     width: 100%;
     height: auto;

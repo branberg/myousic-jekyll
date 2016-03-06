@@ -1,37 +1,39 @@
 // setup for mobile menu
-#mobile-menu{
+.mobile-menu {
 
-  background-color: $mobile_menu_bg;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 0;
   padding: 0 60px 0 0;
+  background-color: $mobile-menu-bg;
+  z-index: 0;
 
   @media (min-width: 768px) {
     display: none;
   }
 
-  .menu{
-    padding: 20px;
+  .menu {
     margin: 0;
+    padding: 20px;
     text-align: left;
   }
-  .menu-item{
+
+  .menu-item {
     display: block;
   }
-  .menu-item__link{
+
+  .menu-item__link {
 
     display: block;
     padding: 20px;
+    transition: opacity 0.05s linear;
+    color: $mobile-menu-text;
     font-size: 1.2em;
     opacity: 1;
-    color: $mobile_menu_text;
-    @include transition( opacity, 0.05s, linear );
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
 
@@ -39,18 +41,18 @@
 
 }
 
-.mobile-menu-toggle{
+.mobile-menu-toggle {
 
-  outline: none;
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 60px;
   height: 60px;
-  z-index: 100;
+  outline: none;
   font-size: 1.5em;
   opacity: 0.75;
+  z-index: 100;
 
   @media (min-width: 768px) {
     display: none;
@@ -59,68 +61,69 @@
 }
 
 // general menus
-.menu-container{
+.menu-container {
 
   display: none;
 
   @media (min-width: 768px) {
 
-    float: right;
     display: block;
-    font-size: 1em;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 500;
     max-width: 75%;
+    float: right;
+    color: $white;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
 
   }
 
 }
 
-.site-header--homepage .menu-container{
+.site-header--homepage .menu-container {
 
   @media (min-width: 768px) {
 
     position: absolute;
-    z-index: 100;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     max-width: 100%;
+    z-index: 100;
 
   }
 
 }
 
-.menu{
+.menu {
   text-align: center;
 }
-.menu-item{
 
-  text-transform: uppercase;
-  font-weight: 300;
+.menu-item {
+
   display: inline-block;
   position: relative;
   font-family: $montserrat;
+  font-weight: 300;
+  text-transform: uppercase;
 
-  &__link{
+}
 
-    color: $header_text_color;
-    display: inline-block;
-    padding: 0.625em 1em;
-    text-decoration: none;
-    -webkit-backface-visibility: hidden;
-    @include transition( opacity, 0.15s, ease-in-out );
+.menu-item__link,
+%menu-item__link {
 
-    &:hover{
-      opacity: 0.85;
-    }
+  display: inline-block;
+  padding: 0.625em 1em;
+  transition: opacity 0.15s ease-in-out;
+  color: $header-text-color;
+  text-decoration: none;
 
-    &--current{
-      @extend .menu-item__link;
-      opacity: 0.85;
-    }
+  &:hover {
+    opacity: 0.85;
+  }
 
+  &--current {
+    @extend %menu-item__link;
+    opacity: 0.85;
   }
 
 }

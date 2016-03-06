@@ -1,0 +1,25 @@
+scss_files: '_sass/**/*.scss'
+
+linters:
+  EmptyRule:
+    enabled: false
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+  PropertySortOrder:
+    order: smacss
+    separate_groups: false
+
+  LeadingZero:
+    style: include_zero
+
+  SpaceBeforeBrace:
+    allow_single_line_padding: true
+
+  HexLength:
+    style: long
+
+  NestingDepth:
+    max_depth: 4

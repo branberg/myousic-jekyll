@@ -1,54 +1,56 @@
-.album{
+.album {
 
-  background-color: $music_bg_color;
-  margin-bottom: 30px;
   @include clearfix;
+  margin-bottom: 30px;
+  background-color: $music-bg-color;
 
   @media (min-width: 480px) {
-    margin-bottom: $spacer*2;
+    margin-bottom: $spacer * 2;
   }
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 
-  &__embed{
+  &__embed {
 
     height: 200px;
 
     @media (min-width: 768px) {
-      float: left;
       width: 50%;
+      float: left;
     }
 
-    iframe{
+    // scss-lint:disable ImportantRule
+    iframe {
       display: block;
       width: 100% !important;
       height: 100% !important;
     }
+    // scss-lint:enable ImportantRule
 
   }
 
-  &__info{
+  &__info {
 
     padding: $spacer;
 
-    @media (min-width: 768px) {
-      padding: $spacer*2;
-      float: left;
-      width: 50%;
+    @media (min-width: 768px)  {
       position: relative;
+      width: 50%;
+      padding: $spacer * 2;
+      float: left;
     }
 
   }
 
-  &__type{
+  &__type {
 
+    color: $music-text-color;
     font-family: $montserrat;
-    text-transform: uppercase;
     font-size: 0.85rem;
+    text-transform: uppercase;
     opacity: 0.7;
-    color: $music_text_color;
 
     @media (min-width: 768px) {
       font-size: 1.125rem;
@@ -56,12 +58,12 @@
 
   }
 
-  &__title{
+  &__title {
 
+    margin: ($spacer / 2) 0;
+    color: $music-text-color;
     font-size: 1.625rem;
     font-weight: 500;
-    margin: $spacer/2 0;
-    color: $music_text_color;
 
     @media (min-width: 768px) {
       font-size: 2.375rem;
@@ -69,13 +71,13 @@
 
   }
 
-  &__description{
+  &__description {
 
-    color: $music_text_color;
-    
+    color: $music-text-color;
+
     @media (min-width: 768px) {
-      font-size: 1.15em;
       height: 100px;
+      font-size: 1.15em;
       overflow-y: auto;
     }
 
@@ -83,40 +85,41 @@
       height: 187px;
     }
 
-    > :first-child{ margin-top: 0; }
-    > :last-child{ margin-bottom: 0; }
+    > :first-child { margin-top: 0; }
+    > :last-child { margin-bottom: 0; }
 
   }
 
-  &__button{
+}
 
-    font-size: 1.25rem;
-    display: block;
-    margin: $spacer 0 0 0;
-    font-family: $montserrat;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: $button_bg_color;
-    color: $button_text_color;
-    text-decoration: none;
-    padding: $spacer;
-    @include transition( opacity, 0.05s, linear );
+.album__button,
+%album__button {
 
-    &:hover{
-      opacity: 0.85;
-    }
+  display: block;
+  margin: $spacer 0 0;
+  padding: $spacer;
+  transition: opacity 0.05s linear;
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  font-family: $montserrat;
+  font-size: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 
-    @media (min-width: 768px) {
-      position: absolute;
-      bottom: $spacer*2;
-      left: $spacer*2;
-      right: $spacer*2;
-    }
+  &:hover {
+    opacity: 0.85;
+  }
 
-    &--full{
-      @extend .album__button;
-    }
+  @media (min-width: 768px) {
+    position: absolute;
+    right: $spacer * 2;
+    bottom: $spacer * 2;
+    left: $spacer * 2;
+  }
 
+  &--full {
+    @extend %album__button;
   }
 
 }

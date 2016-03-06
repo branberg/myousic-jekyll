@@ -6,14 +6,8 @@ permalink: /news/
 weight: 0
 ---
 
-<div class="page-section">
-  <div class="wrap">
+{% for post in site.posts %}
 
-    {% for post in site.posts %}
+  {% include news.html post=post %}
 
-      {% include news.html post=post %}
-
-    {% endfor %}
-
-  </div>
-</div>
+{% endfor %}

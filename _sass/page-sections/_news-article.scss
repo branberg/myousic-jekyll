@@ -1,78 +1,82 @@
-.news-article{
+.news-article {
 
   position: relative;
-  padding: 2px 2px 0 2px;
+  padding: 2px 2px 0;
 
-  &:before{
-    content: "";
+  &::before {
+
+    @include gradient(linear, top, rgba($text-primary, 1), rgba($background, 0), 'left top, left bottom');
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    bottom: $spacer*2;
+    bottom: $spacer * 2;
     left: 0;
-    @include gradient(linear,top,rgba($text_primary, 1.00),rgba($background, 0.00),'left top, left bottom');
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$text_primary}', EndColorStr='#{$background}');
+    content: '';
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='# {$text-primary}', EndColorStr='# {$background}');
 
   }
 
   &__header,
-  &__content{
+  &__content {
 
     position: relative;
-    background: $background;
     padding: $spacer;
+    background: $background;
 
     @media (min-width: 768px) {
-      padding: $spacer*2;
+      padding: $spacer * 2;
     }
 
   }
 
-  &__header{
+  &__header {
     padding-bottom: 0;
   }
-  &__title{
+
+  &__title {
 
     margin: 0;
-    font-size: 2.4em;
     float: left;
+    font-size: 2.4em;
 
     @media (min-width: 768px) {
       font-size: 2.3em;
     }
 
-    a{
+    a {
       text-decoration: none;
     }
 
   }
-  &__date{
+
+  &__date {
 
     display: none;
 
     @media (min-width: 768px) {
-      
+
       display: block;
+      margin-top: $spacer / 2;
       float: right;
       text-transform: uppercase;
       opacity: 0.7;
-      margin-top: $spacer/2;
 
     }
 
   }
 
-  &__content{
+  &__content {
 
     font-size: 1.5em;
     font-weight: 300;
 
-    & :first-child{margin-top:0;}
-    & :last-child{margin-bottom:0;}
+    :first-child {margin-top: 0;}
+    :last-child {margin-bottom: 0;}
 
   }
-  &__post-link{
+
+  &__post-link {
 
     display: block;
     text-align: center;

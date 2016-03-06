@@ -1,18 +1,18 @@
-.site-footer{
+.site-footer {
 
-  color: $footer_text;
   padding: 40px 0;
-  background-color: $footer_bg;
+  background-color: $footer-bg;
+  color: $footer-text;
   font-family: $montserrat;
 
   @media (min-width: 480px) {
     padding: 60px 0;
   }
-  
+
 }
 
-.site-credits{
-  text-align: center;
-  padding-top: 40px;
+.site-credits {
   margin: 0;
+  padding-top: 40px;
+  text-align: center;
 }

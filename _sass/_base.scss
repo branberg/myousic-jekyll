@@ -1,42 +1,47 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
   height: 100%;
   background: $background;
+  color: $text-primary;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $text_primary;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $montserrat;
   font-weight: 500;
 }
 
-a{
-  color: $text_primary;
+a {
+  color: $text-primary;
 }
 
-ul, ol{
-  list-style-type: none;
+ul,
+ol {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
-.clearfix:after{
+.clearfix::after {
 
-  content: "";
   display: table;
   width: 100%;
   clear: both;
+  content: '';
 
 }
 
-.truncate{
-  text-overflow: ellipsis;
+.truncate {
   max-width: 100%;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
