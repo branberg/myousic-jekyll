@@ -1,4 +1,4 @@
-.wrap{
+.wrap {
 
   max-width: 87.5%;
   margin: 0 auto;
@@ -11,34 +11,36 @@
 
   @media (min-width: 1024px) {
     max-width: 940px;
-    padding: 0 $spacer/2;
+    padding: 0 $spacer / 2;
   }
 
 }
 
-#site-wrap{
+.site-wrap {
 
   position: relative;
-  background: $background;
   min-height: 100%;
+  background: $background;
 
-  &.open{
-    @include box-shadow(0, 0, 20px, rgba(0,0,0,0.15));
+  &.open {
+    // scss-lint:disable ColorVariable
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    // scss-lint:enable ColorVariable
   }
 
 }
 
-.page-content{
+.page-content {
 
-  > .wrap{
+  > .wrap {
 
     @media (min-width: 768px) {
       position: relative;
-      margin-top: -200px;
-      padding: 0 0 40px 0;
-      z-index: 100;
-      background-color: $background;
       min-height: 400px;
+      margin-top: -200px;
+      padding: 0 0 40px;
+      background-color: $background;
+      z-index: 100;
     }
 
   }

@@ -1,13 +1,15 @@
-.video{
+.video {
 
-  &__fluid-wrapper{
+  &__fluid-wrapper {
 
-    width: 100%;
     position: relative;
+    width: 100%;
     padding: 0;
     padding-top: 56.3043%;
 
-    iframe, object, embed{
+    iframe,
+    object,
+    embed {
       position: absolute;
       top: 0;
       left: 0;

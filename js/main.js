@@ -46,8 +46,8 @@ FUNCTIONS
   $.fn.mobileMenu = function(){
     var menu = this.html();
     var mobileMarkup = '<button class="mobile-menu-toggle"><i class="fa fa-bars"></i></button>';
-    $('body').prepend('<div id="mobile-menu">' + menu + '</div>');
-    $('#site-wrap').prepend(mobileMarkup);
+    $('body').prepend('<div class="mobile-menu">' + menu + '</div>');
+    $('.site-wrap').prepend(mobileMarkup);
     return this;
   };
 
@@ -102,7 +102,7 @@ jQuery(document).ready(function($) {
 
     var windowWidth = $(window).width();
     var rightOffset = windowWidth - 60;
-    var siteWrap = $('#site-wrap');
+    var siteWrap = $('.site-wrap');
 
     if( $(mobileMenuToggle).hasClass('expanded') ) {
       siteWrap.animate({

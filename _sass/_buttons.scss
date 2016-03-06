@@ -1,19 +1,20 @@
 button,
-.button{
+.button,
+%button {
 
   display: inline-block;
-  background: none;
-  border: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
   text-decoration: none;
 
-  &__read-more{
-    @extend .button;
-    border: solid 1px $text-primary;
+  &__read-more {
+    @extend %button;
     padding: 10px 20px;
-    font-size: 1.125rem;
+    border: solid 1px $text-primary;
     border-radius: 6px;
+    font-size: 1.125rem;
   }
 
 }

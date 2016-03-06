@@ -1,18 +1,15 @@
-.site-header{
+.site-header,
+%site-header {
 
-  background: $header-bg-color $header-bg-image 50% 50% no-repeat;
   position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: $header-bg-color $header-bg-image 50% 50% no-repeat;
   background-size: cover;
 
   @media (min-width: 768px) {
-    padding-top: $spacer*1.5;
+    padding-top: $spacer * 1.5;
   }
 
-  &:after{
-    content:"";
+  &::after {
     display: block;
     position: absolute;
     top: 0;
@@ -20,38 +17,39 @@
     bottom: 0;
     left: 0;
     background: $header-bg-overlay;
+    content: '';
     opacity: $header-bg-opacity;
   }
 
-  .wrap{
+  .wrap {
     position: relative;
-    z-index: 10;
     height: 100%;
+    z-index: 10;
   }
 
   // homepage varient
-  &--homepage{
+  &--homepage {
 
-    @extend .site-header;
+    @extend %site-header;
 
-    .logo{
+    .logo {
 
       display: block;
-      padding: $spacer*3 $spacer;
-      text-align: center;
-      max-width: 100%;
       width: 100%;
+      max-width: 100%;
+      padding: ($spacer * 3) $spacer;
+      text-align: center;
 
       @media (min-width: 768px) {
         font-size: 3em;
       }
 
       @media (min-width: 768px) {
-        font-size: 4em;
-        padding: 0;
-        float: none;
         max-width: 70%;
         margin: 200px auto;
+        padding: 0;
+        float: none;
+        font-size: 4em;
       }
 
     }
@@ -60,50 +58,51 @@
 
 }
 
-.logo{
+.logo,
+%logo {
 
   display: block;
-  float: left;
-  font-family: $montserrat;
-  color: $header-text-color;
-  text-decoration: none;
-  font-size: 1.2em;
-  text-align: left;
   position: absolute;
   top: 20px;
   left: 26px;
+  float: left;
+  color: $header-text-color;
+  font-family: $montserrat;
+  font-size: 1.2em;
+  text-align: left;
+  text-decoration: none;
 
   @media (min-width: 768px) {
 
     position: relative;
     top: auto;
     left: auto;
+    transition: all 0.15s ease-in-out;
     font-size: 1.6em;
-    -webkit-backface-visibility: hidden;
-    @include transition( all, 0.15s, ease-in-out );
 
   }
 
-  &--text{
+  &--text {
 
-    @extend .logo;
+    @extend %logo;
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
 
   }
-  &--image{
-    
-    @extend .logo;
 
-    img{
+  &--image {
+
+    @extend %logo;
+
+    img {
       display: block;
       max-width: 100%;
       height: auto;
     }
 
-    &:hover{
+    &:hover {
       opacity: 0.65;
     }
 
@@ -111,19 +110,19 @@
 
 }
 
-.page-title{
+.page-title {
 
   display: block;
-  font-size: 2em;
-  text-transform: uppercase;
-  color: $header-text-color;
-  text-align: center;
-  padding: 116px 20px 60px 20px;
-  font-family: "Montserrat", sans-serif;
   margin: 0 auto;
+  padding: 116px 20px 60px;
+  color: $header-text-color;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
-    padding: 80px 0 300px 0;
+    padding: 80px 0 300px;
     clear: both;
   }
 

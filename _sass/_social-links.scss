@@ -1,4 +1,4 @@
-.social-links{
+.social-links {
 
   margin: 0;
   padding: 0;
@@ -6,18 +6,19 @@
   list-style-type: none;
 
 }
-.social-link{
+
+.social-link {
 
   display: inline-block;
-  list-style-type: none;
   margin-right: -4px;
+  list-style-type: none;
 
-  a{
+  a {
     display: block;
     padding: 10px 14px;
+    color: $footer-text;
     font-size: 28px;
     text-decoration: none;
-    color: $footer-text;
   }
 
 }

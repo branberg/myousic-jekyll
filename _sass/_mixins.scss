@@ -1,94 +1,27 @@
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-@mixin hoverActiveFocus() {
-  &:hover, &:active, &:focus {
+  @media screen and (max-width: $device) {
     @content;
   }
 }
 
-//** GRID WIDTH *********************/
-@mixin gridGen($colCount, $marginSize, $slug){
-
-  @for $i from 1 through $colCount{
-
-    $singleUnit: (( 100% - ( $marginSize * ($colCount - 1) ) ) / $colCount) + $marginSize;
-    .#{$slug}-#{$i}{
-      width: ( $singleUnit * $i ) - $marginSize;
-    }
-
-  }
-
-}
-
 //** CLEARFIX *********************/
-@mixin clearfix{
-  &:after{
-    content:"";
+@mixin clearfix {
+  &::after {
     display: table;
     clear: both;
+    content: '';
   }
 }
 
 //** TRUNCATE *********************/
-@mixin truncate{
+@mixin truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-//** CALC *********************/
-@mixin calc($property, $expression) {
-  #{$property}: calc(#{$expression});
-  #{$property}: -webkit-calc(#{$expression});
-}
-
-//** FULLSCREEN *********************/
-@mixin absoluteFull($size){
-  position: absolute;
-  top: $size;
-  right: $size;
-  bottom: $size;
-  left: $size;
-}
-
-//** TRANSITION *********************/
-@mixin transition( $type: 'all', $duration: 0.15s, $ease: 'linear' ){
-  -moz-transition: $type $duration $ease;
-  -webkit-transition: $type $duration $ease;
-  -o-transition: $type $duration $ease;
-  transition: $type $duration $ease;
-}
-
-//** BORDER RADIUS *********************/
-@mixin border-radius( $tl, $tr, $br, $bl ) {
-  -moz-border-radius: $tl $tr $br $bl;
-  -webkit-border-radius: $tl $tr $br $bl;
-  -o-border-radius: $tl $tr $br $bl;
-  border-radius: $tl $tr $br $bl;
-}
-
-//** ROUNDED *********************/
-@mixin rounded($radius){
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -o-border-radius: $radius;
-  border-radius: $radius;
-}
-
-//** BOX SHADOW *********************/
-@mixin box-shadow( $xoffset: 0, $yoffset: 0, $spread: 0, $color: rgba(0,0,0,0.8) ) {
-  -moz-box-shadow: $xoffset $yoffset $spread $color;
-  -webkit-box-shadow: $xoffset $yoffset $spread $color;
-  -o-box-shadow: $xoffset $yoffset $spread $color;
-  box-shadow: $xoffset $yoffset $spread $color;
-}
-
 //** PURE CSS TRIANGLES *********************/
-@mixin triangle ( $direction, $size, $color ) {
+@mixin triangle ($direction, $size, $color) {
 
   width: 0;
   height: 0;
@@ -101,38 +34,23 @@
 
   } @elseif $direction == 'down' {
 
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
     border-top: $size solid $color;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
 
   } @elseif $direction == 'left' {
 
     border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
     border-right: $size solid $color;
+    border-bottom: $size solid transparent;
 
   } @elseif $direction == 'up' {
 
-    border-left: $size solid transparent;
     border-right: $size solid transparent;
     border-bottom: $size solid $color;
+    border-left: $size solid transparent;
 
   }
-}
-
-//** BACKGROUND SIZE *********************/
-@mixin background-size( $size: '100%' ) {
-  -webkit-background-size: $size;
-  -moz-background-size: $size;
-  -o-background-size: $size;
-  background-size: $size;
-}
-
-//** TRANSFORM *********************/
-@mixin transform( $transform: '' ){
-  -webkit-transform: $transform;
-  -ms-transform: $transform;
-  transform: $transform;
 }
 
 //** CSS GRADIENT *********************/
@@ -143,11 +61,11 @@ $moz:true;
 $w3:true;
 $ms:true;
 
-@mixin gradient($mode,$direction,$from,$to,$oldDirection:null){
+@mixin gradient($mode, $direction, $from, $to, $old-direction:null) {
 
   @if $webkit == true {
-    @if($oldDirection != null){
-      background-image: -webkit-gradient($mode, #{$oldDirection}, from($from),to($to));
+    @if($old-direction != null) {
+      background-image: -webkit-gradient($mode, #{$old-direction}, from($from), to($to));
     }
     background-image: -webkit-#{$mode}-gradient($direction, $from, $to);
   }
@@ -163,26 +81,4 @@ $ms:true;
   @if $w3 == true {
     background-image: #{$mode}-gradient($direction, $from, $to);
   }
-}
-
-//** KEYFRAMES *********************/
-@mixin keyframes($animation_name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-
-  @-moz-keyframes #{$animation-name} {
-    @content;
-  }
-
-  @keyframes #{$animation-name} {
-    @content;
-  }
-}
-
-//** ANIMATION *********************/
-@mixin animation($name, $duration, $ease, $delay) {
-  -webkit-animation: $name $duration $ease $delay;
-  -moz-animation: $name $duration $ease $delay;
-  animation: $name $duration $ease $delay;
 }

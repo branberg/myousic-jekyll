@@ -1,24 +1,25 @@
-.mailing-list{
+.mailing-list,
+%mailing-list {
 
+  padding: 0 0 40px;
   text-align: center;
-  padding: 0 0 40px 0;
 
   @media (min-width: 480px) {
     padding-bottom: 60px;
   }
 
-  &__title{
+  &__title {
 
     display: block;
+    margin: 0 0 20px;
     color: $footer-text;
-    text-transform: uppercase;
     font-size: 1.4em;
-    margin: 0 0 20px 0;
+    text-transform: uppercase;
 
     @media (min-width: 768px) {
-      font-size: 1.5em;
-      margin: 0 40px 0 0;
       display: inline-block;
+      margin: 0 40px 0 0;
+      font-size: 1.5em;
       vertical-align: middle;
     }
 
@@ -27,7 +28,8 @@
     }
 
   }
-  &__form{
+
+  &__form {
 
     display: block;
     color: $footer-text;
@@ -44,24 +46,25 @@
     }
 
   }
-  &__input{
 
-    border: solid 2px $footer-text;
+  &__input {
+
     display: block;
     padding: 15px;
+    border: solid 2px $footer-text;
     outline: none;
 
     @media (min-width: 768px) {
-      float: left;
       padding: 20px;
+      float: left;
     }
 
-    &--text{
+    &--text {
 
-      @extend .mailing-list__input;
+      @extend %mailing-list__input;
       width: 100%;
-      background: none;
       margin-bottom: 10px;
+      background: none;
       color: $footer-text;
 
       @media (min-width: 768px) {
@@ -73,15 +76,16 @@
       }
 
     }
-    &--submit{
 
-      @extend .mailing-list__input;
-      text-transform: uppercase;
-      background-color: $footer-text;
-      color: #333333;
+    &--submit {
+
+      @extend %mailing-list__input;
       width: 100%;
+      background-color: $footer-text;
+      color: $show-border-color;
+      text-transform: uppercase;
 
-      &:hover{
+      &:hover {
         opacity: 0.7;
       }
 
