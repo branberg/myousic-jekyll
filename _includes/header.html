@@ -49,16 +49,18 @@
                       {% endfor %}
 
                       {% if has_subpages %}
-                        <ul class="sub-menu">
-                          {% for psub in pages %}
-                            {% assign next_weight = floored_weight | plus: 1 %}
-                            {% if psub.weight > floored_weight and psub.weight < next_weight %}
-                              <li class="sub-menu__item">
-                                <a class="menu-item__link{% if psub.url == page.url  %}--current{% endif %}" href="{{ psub.url | prepend: site.baseurl }}">{{ psub.title }}</a>
-                              </li>
-                            {% endif %}
-                          {% endfor %}
-                        </ul>
+                        <div class="sub-menu-wrapper">
+                          <ul class="sub-menu">
+                            {% for psub in pages %}
+                              {% assign next_weight = floored_weight | plus: 1 %}
+                              {% if psub.weight > floored_weight and psub.weight < next_weight %}
+                                <li class="sub-menu__item">
+                                  <a class="sub-menu__item-link{% if psub.url == page.url  %}--current{% endif %}" href="{{ psub.url | prepend: site.baseurl }}">{{ psub.title }}</a>
+                                </li>
+                              {% endif %}
+                            {% endfor %}
+                          </ul>
+                        </div>
                       {% endif %}
 
                     </li>
