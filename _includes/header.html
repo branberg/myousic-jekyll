@@ -29,14 +29,42 @@
         <div class="wrap">
 
           <a href="{{ site.baseurl }}/" class="logo--text">{{ site.title }}</a>
-          <!-- <a href="{{ site.baseurl }}/" class="logo--image"><img src="/images/logo-test.png"></a> -->
 
           <nav class="menu-container">
             {% assign pages = site.pages | sort:"weight" %}
             <ul class="menu">
               {% for p in pages %}
                 {% if p.title and p.weight != 0 %}
-                  <li class="menu-item"><a class="menu-item__link{% if p.url == page.url  %}--current{% endif %}" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
+                  {% assign floored_weight = p.weight | floor %}
+                  {% if p.weight == floored_weight %}
+                    <li class="menu-item">
+                      <a class="menu-item__link{% if p.url == page.url  %}--current{% endif %}" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+
+                      {% assign has_subpages = false %}
+                      {% for psub in pages %}
+                        {% assign next_weight = floored_weight | plus: 1 %}
+                        {% if psub.weight > floored_weight and psub.weight < next_weight %}
+                          {% assign has_subpages = true %}
+                        {% endif %}
+                      {% endfor %}
+
+                      {% if has_subpages %}
+                        <div class="sub-menu-wrapper">
+                          <ul class="sub-menu">
+                            {% for psub in pages %}
+                              {% assign next_weight = floored_weight | plus: 1 %}
+                              {% if psub.weight > floored_weight and psub.weight < next_weight %}
+                                <li class="sub-menu__item">
+                                  <a class="sub-menu__item-link{% if psub.url == page.url  %}--current{% endif %}" href="{{ psub.url | prepend: site.baseurl }}">{{ psub.title }}</a>
+                                </li>
+                              {% endif %}
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endif %}
+
+                    </li>
+                  {% endif %}
                 {% endif %}
               {% endfor %}
             </ul>
